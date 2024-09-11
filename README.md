@@ -3,11 +3,11 @@
 **Mục đích**: Trang này phát một thông điệp chào mừng khi nhấn nút trên trang web.
 
 ## Thành viên nhóm
-- Huỳnh Diệu Quốc Quân
+- Quân
 - Duy
 - Huyền
 - Chi
-- Ánh
+- Anh
 - Thư
 
 ## Hướng dẫn
