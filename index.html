@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tự động phát âm thanh</title>
+    <script>
+        window.onload = function() {
+            var audio = new Audio('https://example.com/duong-dan-den-file-am-thanh.mp3');
+            audio.play().catch(function(error) {
+                console.log('Không thể tự động phát âm thanh: ' + error);
+                document.body.innerHTML += '<p>Nhấn vào nút bên dưới để phát âm thanh:</p>';
+                document.body.innerHTML += '<button onclick="playAudio()">Phát âm thanh</button>';
+            });
+        }
+
+        function playAudio() {
+            var audio = new Audio('https://example.com/duong-dan-den-file-am-thanh.mp3');
+            audio.play();
+        }
+    </script>
+</head>
+<body>
+    <h1>Trang web tự động phát âm thanh</h1>
+    <p>Nếu âm thanh không tự động phát, hãy nhấn vào nút bên dưới:</p>
+    <button onclick="playAudio()">Phát âm thanh</button>
+</body>
+</html>
