@@ -22,9 +22,22 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 15px 30px;
+            font-size: 18px;
             cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .notice {
+            color: #FF5733;
+            font-weight: bold;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -32,7 +45,8 @@
     <div class="container">
         <h1>Hello Group 6</h1>
         <p>Chào mừng bạn đến với trang web của chúng tôi!</p>
-        <button onclick="playAudio()">Phát âm thanh</button>
+        <p class="notice">Nhấn nút bên dưới để nghe thông điệp âm thanh</p>
+        <button onclick="playAudio()">Phát Âm Thanh</button>
         <audio id="myAudio" src="Hello Group 6.mp3"></audio>
     </div>
 
@@ -44,16 +58,11 @@
 
         window.onload = function() {
             var audio = document.getElementById("myAudio");
-            var playPromise = audio.play();
-
-            if (playPromise !== undefined) {
-                playPromise.then(_ => {
-                    console.log("Tự động phát thành công");
-                })
-                .catch(error => {
+            document.body.addEventListener('click', function() {
+                audio.play().catch(function(error) {
                     console.log("Tự động phát bị chặn, cần tương tác của người dùng");
                 });
-            }
+            }, { once: true });
         }
     </script>
 </body>
